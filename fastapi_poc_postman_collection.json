@@ -1,0 +1,82 @@
+{
+	"info": {
+		"_postman_id": "8877da58-df18-49cc-b8fc-4dea75cf1a9f",
+		"name": "FastAPI POC",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "8198028"
+	},
+	"item": [
+		{
+			"name": "GET Index",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://0.0.0.0:8008",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "8008"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Sentiment",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://0.0.0.0:8008/sentimento",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "8008",
+					"path": [
+						"sentiment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Sentiment",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"data\": \"This is a test data\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://0.0.0.0:8008/sentimiento",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "8008",
+					"path": [
+						"sentimiento"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
