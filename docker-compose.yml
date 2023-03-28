@@ -1,0 +1,32 @@
+version: '3'
+
+services:
+  fastapi:
+    build: 
+      context: fastapi
+      dockerfile: Dockerfile
+    # restart: unless-stopped
+    ports: 
+      - 8008:8008
+    environment:
+      APP_ENV: "prod"
+      APP_DEBUG: "False"
+      # APP_PORT: 8008
+    deploy:
+      resources:
+        limits:
+          cpus: '4'
+          memory: 8192M
+        reservations:
+          cpus: '2.0'
+          memory: 4096M
+    networks:
+      - proyect
+    container_name: fastapi-docker
+    # volumes:
+    #   - "./fastapi:/app/"
+
+
+networks:
+  proyect:
+    driver: bridge

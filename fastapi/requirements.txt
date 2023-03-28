@@ -1,0 +1,16 @@
+fastapi
+uvicorn[standard]
+# uvicorn
+pillow
+numpy
+pandas
+scikit-learn
+#sklearn
+python-multipart
+aiofiles
+joblib
+transformers
+nltk
+stanza
+#pysentimiento
+dill
