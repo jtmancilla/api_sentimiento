@@ -1,9 +1,17 @@
 # API sentimiento v1
 
+# Modelos
+
+## crear los modelos con train.py
+
+```shell
+python train.py
+```
+
 
 # Fast API
 
-## Running with docker
+## levantar los servicios con docker
 
 ```shell
 docker compose up
@@ -11,25 +19,7 @@ docker compose up
 
 
 
-## Running with python virtualenv
-
-1. Create virtualenv
-
-2. Install requirements
-
-    ```shell
-    pip install -r requirements.ct
-    ```
-
-3. Execute
-
-    ```shell
-    uvicorn main:app --reload
-    ```
-
-
-
-## Testing with postman
+## Probamos con postman
 
 POST:  http://0.0.0.0:8008/sentimiento/
 
