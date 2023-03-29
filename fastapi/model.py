@@ -3,29 +3,29 @@ import numpy as np
 from pysentimiento.preprocessing import preprocess_tweet
 
 
-def analize1(text1):
-    
-    ## Carga de Modelos entrenados
+
+## Carga de Modelos entrenados
     # es_nlp_model = joblib.load("utils/es_nlp1.pkl")
     # Load the saved model from the file
-    with open("utils/es_nlp1.pkl", "rb") as f:
+with open("utils/es_nlp1.pkl", "rb") as f:
         es_nlp_model = dill.load(f)
 
-    # sentiment_analyzer_model = joblib.load("utils/sentiment_analyzer.pkl")
-    with open("utils/sentiment_analyzer.pkl", "rb") as f:
+# sentiment_analyzer_model = joblib.load("utils/sentiment_analyzer.pkl")
+with open("utils/sentiment_analyzer.pkl", "rb") as f:
         sentiment_analyzer_model = dill.load(f)
 
 
-    # emotion_analyzer_model = joblib.load('utils/emotion_analyzer.pkl')
-    with open("utils/emotion_analyzer.pkl", "rb") as f:
+# emotion_analyzer_model = joblib.load('utils/emotion_analyzer.pkl')
+with open("utils/emotion_analyzer.pkl", "rb") as f:
         emotion_analyzer_model = dill.load(f)
 
-
-    # hate_speech_analyzer_model = joblib.load('utils/hate_speech_analyzer.pkl')
-    with open("utils/hate_speech_analyzer.pkl", "rb") as f:
+# hate_speech_analyzer_model = joblib.load('utils/hate_speech_analyzer.pkl')
+with open("utils/hate_speech_analyzer.pkl", "rb") as f:
         hate_speech_analyzer_model = dill.load(f)
 
 
+def analize1(text1):
+    
     result = {}
     initial_text = text1
     text = preprocess_tweet(initial_text)
